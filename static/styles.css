@@ -1,0 +1,84 @@
+body {
+    background-color: #3B3B46;
+    color: white;
+}
+
+table.table-bordered thead td {
+    background-color: #3B3B46;
+    color: white;
+}
+
+table.table-bordered tbody td {
+    background-color: #3B3B46;
+    color: white;
+}
+
+table.table-bordered thead th{
+    background-color: #3B3B46;
+    color: white;
+}
+
+.navbar.bg-body-tertiary {
+    background-color: #3B3B46 !important;
+    color: white;
+}
+
+.navbar-brand {
+    color: white !important;
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+}
+
+select {
+    background-color: #3B3B46;
+    color: white;
+    width: 150px;
+    height: 35px;
+}
+
+input {
+    background-color: #3B3B46;
+    color: white;
+}
+
+.table-footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    background-color: #3B3B46;
+    color: white;
+    padding: 10px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 28px;
+    margin-right: 40px;
+}
+
+.navbar .navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
+.navbar.bg-body-tertiary {
+    background-color: #555555 !important;
+    color: white;
+}
+
+#age {
+    margin-top: 24px;
+}
+
+.info-title {
+    margin-top: 24px;
+}
+
+a.external-link {
+    color: #7BAFD4;
+    text-decoration: none;
+}

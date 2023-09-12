@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block title %}IPPT Score Calculator{% endblock %}
+
+{% block navlinks %}
+    <a class="nav-link" href="/">IPPT Score Calculator</a>
+    <a class="nav-link" href="/info">More Information</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <form method="POST">
+        <div class="container">
+            <form method="POST">
+                Age last birthday:
+                <select id="age" name="age" required>
+                    {% for age in range(18, 61) %}
+                        <option value="{{ age }}">{{ age }} years old</option>
+                    {% endfor %}
+                </select>
+                <p> Age group: <span id="age_group_display"></span></p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Station</th>
+                        <th style="width: 25%;">Performance</th>
+                        <th style="width: 25%;">Score</th>
+                        <th style="width: 25%;">To next point</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Push-ups
+                        </td>
+                        <td>
+                            <select id="push_ups" name="push_ups">
+                            {% for reps in range(0, 61) %}
+                            <option value="{{ reps }}">{{ reps }} reps</option>
+                            {% endfor %}
+                            </select>
+                        </td>
+                        <td>
+                            <span id="push_ups_score"></span>
+                        </td>
+                        <td>
+                            <span id="push_ups_to_next_point"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Sit-ups
+                        </td>
+                        <td>
+                           <select id="sit_ups" name="sit_ups">
+                                {% for reps in range(0, 61) %}
+                                <option value="{{ reps }}">{{ reps }} reps</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td>
+                            <span id="sit_ups_score"></span>
+                        </td>
+                        <td>
+                            <span id="sit_ups_to_next_point"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2.4km run
+                        </td>
+                        <td>
+                            <select id="run_minutes" name="run_minutes">
+                                {% for minutes in range(8, 19) %}
+                                <option value="{{ minutes }}">{{ minutes }} minutes</option>
+                                {% endfor %}
+                            </select>
+                            <select id="run_seconds" name="run_seconds">
+                                <!-- Options for seconds added dynamically using JavaScript -->
+                            </select>
+                        </td>
+                        <td>
+                            <span id="run_score"></span>
+                        </td>
+                        <td>
+                            <span id="secs_to_next_point"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Overall
+                        </td>
+                        <td>
+                            Award: <span id="award_type">{{ award_type }}</span>
+                            <br>
+                            Incentive amount: <span id="incentive_amount">{{ incentive_amount }}</span>
+                        </td>
+                        <td>
+                            <span id="total_score"></span>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <h3><b>Pacing for 2.4km run:</b></h3>
+                Per 400m: <span id="pace400m_min"></span> <span id="pace400m_sec"></span>
+                <br>
+                Per km: <span id="pace1km_min"></span> <span id="pace1km_sec"></span>
+            </p>
+    </form>
+</div>
+
+{% endblock %}
